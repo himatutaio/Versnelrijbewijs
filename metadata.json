@@ -1,0 +1,7 @@
+{
+  "name": "VersneldRijbewijs.nl - De Snelste Weg naar je Rijbewijs",
+  "description": "Een professioneel platform voor spoedcursussen rijbewijs. Studenten starten direct met hun pakket met een 100% tevredenheidsgarantie na de eerste les.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

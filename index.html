@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VersneldRijbewijs.nl | Snel & Goedkoop je Rijbewijs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .bg-gradient-blue { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Car Wobble on Logo Hover */
+        @keyframes car-wobble {
+          0%, 100% { transform: rotate(0deg) translateX(0) translateY(0); }
+          25% { transform: rotate(-3deg) translateX(-1px) translateY(-1px); }
+          50% { transform: rotate(0deg) translateX(0) translateY(0); }
+          75% { transform: rotate(3deg) translateX(1px) translateY(-1px); }
+        }
+        .animate-car-front {
+          display: inline-block;
+          transform-origin: bottom center;
+          transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .logo-hover:hover .animate-car-front {
+          animation: car-wobble 0.6s ease-in-out infinite;
+          color: #3b82f6;
+        }
+
+        /* Hero Background Car Animation */
+        @keyframes drive-by {
+          0% { left: -150px; opacity: 0; }
+          5% { opacity: 0.3; }
+          95% { opacity: 0.3; }
+          100% { left: 100%; opacity: 0; }
+        }
+        .car-bg-animation {
+          position: absolute;
+          bottom: 10%;
+          left: -150px;
+          font-size: 2rem;
+          color: #3b82f6;
+          opacity: 0;
+          pointer-events: none;
+          animation: drive-by 15s linear infinite;
+          z-index: 1;
+        }
+
+        /* Subtle Fade In Up */
+        @keyframes fade-in-up {
+          from { opacity: 0; transform: translateY(15px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up {
+          animation: fade-in-up 0.8s ease-out forwards;
+        }
+
+        /* Floating Badge */
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-5px); }
+        }
+        .animate-float {
+          animation: float 4s ease-in-out infinite;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.95.3"
+  }
+}
+</script>
+</head>
+<body class="bg-slate-50 text-slate-900">
+    <div id="root"></div>
+</body>
+</html>
